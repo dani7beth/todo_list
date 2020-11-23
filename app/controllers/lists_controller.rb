@@ -15,8 +15,10 @@ class ListsController < ApplicationController
   def create
     @list = current_user.lists.new(list_params)
     if @list.save
+      flash[:success] = "Task Created"
       redirect_to lists_path
     else
+      flash[:error] = "Error #{@list.errors.full_messages}"
       render :new
     end
   end
