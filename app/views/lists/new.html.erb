@@ -1,8 +1,8 @@
-<h1>Add List</h1>
-<%= form_with (model: @list, local: true) do |f| %>
-  <div class='field'>
+<h1>Add Task</h1>
+<%= form_with(model: @list, local: true) do |f| %>
+  <div class="field">
     <%= f.label :task %>
-    <%= f.text_field :task, required: true, placeholder: "Write Task Here" %>
+    <%= f.text_field :task, required: true, placeholder: "Write your task here!" %>
   </div>
+  <%= f.submit %>
 <% end %>
-
