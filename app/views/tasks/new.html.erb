@@ -1,8 +1,11 @@
 <h1>Add Task</h1>
+<hr class="ui section divider" />
 <%= form_with(model: @task, local: true) do |f| %>
-  <div class="field">
+
     <%= f.label :item %>
+    <div class='ui mini fluid input'>
     <%= f.text_field :item, required: true, placeholder: "Write your task here!" %>
-  </div>
-  <%= f.submit %>
+    </div>
+    <br />
+  <button class="ui green button inverted">Create Task</button>
 <% end %>

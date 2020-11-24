@@ -1,17 +1,20 @@
-<%= button_to "log Out", destroy_user_session_path, method: :delete%>
+<%= button_to "log out", destroy_user_session_path, method: :delete, class: 'ui teal button '%>
 <h2>Welcome <%= current_user.first_name%> </h2>
-<hr />
-<%= link_to "Add Tasks", new_task_path %>
+<hr class="ui section divider"/>
+
+<div class='ui container'>
+<%= link_to "Add Tasks", new_task_path , class: 'link' %>
 <h3>Your Tasks</h3>
 <ul>
   <% @tasks.each do |task| %>
     <li>
       <%= task.item %>
       <br />
-      <%=link_to 'Edit Task', edit_task_path(task.id)%>
-      <%=link_to 'Delete Task', task_path(task.id), method: :delete%>
+      <%=link_to 'Edit Task', edit_task_path(task.id), class: 'ui yellow button inverted'%>
+      <%=link_to 'Delete Task', task_path(task.id), method: :delete,class: 'ui red button inverted' %>
     </li>
     <br />
     <br />
   <% end %>
 </ul>
+</div>

@@ -1,7 +1,11 @@
 <h1>Task</h1>
+<hr class="ui section divider" />
 <%= form_for @task do |f| %>
-<%=f.label :item%>
+<%=f.label :item, class: 'label'%>
+<div class="ui mini fluid input">
 <%=f.text_field :item%>
+</div>
 <br />
-<%=f.submit%>
+<button class="ui green button inverted">Update Task</button>
 <% end %>
+

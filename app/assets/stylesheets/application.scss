@@ -13,3 +13,40 @@
  *= require_tree .
  *= require_self
  */
+
+
+
+@import "semantic-ui";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Nerko+One&family=Ubuntu&display=swap');
+
+$blue: #19d3da;
+$light-grey: #686d76;
+$charcoal: #373a40;
+$white: #eeeeee;
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    background-color: $charcoal;
+    color: $white;
+}
+h1,h2{
+    font-family: 'Ubuntu', cursive;
+    font-size: 3rem;
+    padding: 0 7%;
+    text-align: center;
+}
+li{
+   
+}
+.link{
+    color: $blue;
+}
+.link:hover{
+    color: #129ea3;
+}
+label,.label{
+    color: $blue;
+}
+
+

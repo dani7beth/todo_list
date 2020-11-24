@@ -1,25 +1,26 @@
 <h2>Log in</h2>
-
+<hr class="ui section divider" />
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
     <%= f.label :email %><br />
+  <div class="field ui mini input">
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
-
-  <div class="field">
+ <br />
+ <br />
     <%= f.label :password %><br />
+  <div class="field ui mini input">
     <%= f.password_field :password, autocomplete: "current-password" %>
   </div>
 
   <% if devise_mapping.rememberable? %>
     <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+      <%= f.check_box :remember_me, class: 'ui checkbox' %>
+      <%= f.label :remember_me ,class: 'label'%>
     </div>
   <% end %>
 
   <div class="actions">
-    <%= f.submit "Log in" %>
+    <button class="ui teal button">Login</button>
   </div>
 <% end %>
 
