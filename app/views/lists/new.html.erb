@@ -1,8 +1,0 @@
-<h1>Add Task</h1>
-<%= form_with(model: @list, local: true) do |f| %>
-  <div class="field">
-    <%= f.label :task %>
-    <%= f.text_field :task, required: true, placeholder: "Write your task here!" %>
-  </div>
-  <%= f.submit %>
-<% end %>

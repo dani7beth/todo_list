@@ -1,0 +1,17 @@
+<%= button_to "log Out", destroy_user_session_path, method: :delete%>
+<h2>Welcome <%= current_user.first_name%> </h2>
+<hr />
+<%= link_to "Add Tasks", new_task_path %>
+<h3>Your Tasks</h3>
+<ul>
+  <% @tasks.each do |task| %>
+    <li>
+      <%= task.item %>
+      <br />
+      <%=link_to 'Edit Task', edit_task_path(task.id)%>
+      <%=link_to 'Delete Task', task_path(task.id), method: :delete%>
+    </li>
+    <br />
+    <br />
+  <% end %>
+</ul>
